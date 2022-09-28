@@ -115,7 +115,6 @@ public class Main {
         }
         System.out.println();
     }
-
     public static void Задание_3_2() {
         System.out.println("Задание 2");
         int i = 0;
