@@ -22,7 +22,7 @@ public class Main {
         double percent = 0.01;
         for (int i = 1; sumWithPercent <= 2_459_000; i++) {
             sumWithPercent = (sumWithPercent + part) * (1 + percent);
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumWithPercent + " рублей.");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(sumWithPercent) + " рублей.");
         }
         System.out.println();
     }
@@ -61,19 +61,19 @@ public class Main {
         double percent = 0.07;
         for (int i = 1; sumWithPercent <= 12_000_000; i++) {
             sumWithPercent = sumWithPercent * (1 + percent);
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sumWithPercent + " рублей.");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(sumWithPercent) + " рублей.");
         }
         System.out.println();
     }
 
     public static void Задание_2_2() {
         System.out.println("Задание 2");
-        double sumPercent = 15_000;
+        double sumWithPercent = 15_000;
         double percent = 0.07;
-        for (int i = 1; sumPercent <= 12_000_000; i++) {
-            sumPercent = sumPercent * (1 + percent);
+        for (int i = 1; sumWithPercent <= 12_000_000; i++) {
+            sumWithPercent = sumWithPercent * (1 + percent);
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + sumPercent + " рублей.");
+                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(sumWithPercent) + " рублей.");
             }
         }
         System.out.println();
@@ -81,12 +81,12 @@ public class Main {
 
     public static void Задание_2_3() {
         System.out.println("Задание 3");
-        double sumPercent = 15_000;
+        double sumWithPercent = 15_000;
         double percent = 0.07;
         for (int i = 1; i <= 108; i++) {
-            sumPercent = sumPercent * (1 + percent);
+            sumWithPercent = sumWithPercent * (1 + percent);
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + ", сумма накоплений равна " + sumPercent + " рублей.");
+                System.out.println("Месяц " + i + ", сумма накоплений равна " + Math.round(sumWithPercent) + " рублей.");
             }
         }
         System.out.println();
@@ -95,10 +95,9 @@ public class Main {
     public static void Задание_2_4() {
         System.out.println("Задание 4");
         int i = 5;
-        System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
         while (i < 31) {
-            i = i + 7;
             System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
+            i = i + 7;
         }
         System.out.println();
     }
